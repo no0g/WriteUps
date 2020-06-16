@@ -1,6 +1,7 @@
 # Joystick
-![alt text](https://tryhackme-images.s3.amazonaws.com/room-icons/a1f2af5e550f182a1efc6c7f0f3ff6b4.png)\n
-Medium CTF room in [TryHackme](https://tryhackme.com/room/joystick)
+![alt text](https://tryhackme-images.s3.amazonaws.com/room-icons/a1f2af5e550f182a1efc6c7f0f3ff6b4.png)
+
+## Medium CTF room in [TryHackme](https://tryhackme.com/room/joystick)
 # Reconnaissance
   - Nmap Scan
     `nmap -A -T5 -oN nmap.txt -vv <ip>`
