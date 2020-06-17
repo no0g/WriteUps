@@ -190,7 +190,7 @@ There is a folder called `email_backup` inside cage's home directory, when we re
     account on here. I want to know what he's hiding from me... I might need a new agent. Pretty
     sure he's out to get me. The note said:
     
-    haiinspsyanileph
+    ***************
     
     The guy also seems obsessed with my face lately. He came him wearing a mask of my face...
     was rather odd. Imagine wearing his ugly face.... I wouldnt be able to FACE that!! 
