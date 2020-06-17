@@ -206,8 +206,9 @@ From that information, we can try to dechiper it with viginere method.
 
 The dechipered text can be used as the root password for the machine
 
-- Root flag
-    the root flag can be found inside one fo the file inside the `email_backup` folder.
+- Root flag  
+    
+    The root flag can be found inside one fo the file inside the `email_backup` folder.\
     ```bash
     From - master@ActorsGuild.com
     To - SeanArcher@BigManAgents.com
