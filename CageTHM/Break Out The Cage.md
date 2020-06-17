@@ -201,7 +201,7 @@ There is a folder called `email_backup` inside cage's home directory, when we re
     
     The Legend - Cage
     ```
-From the latest email, we can see that there is a strings that looks like a chiper text. on the email, cage is mentioned that his agent is obsessed with his face.
+From the latest email, we can see that there is a strings that looks like a chiper text. on the email, cage mentioned that his agent is obsessed with his face.
 From that information, we can try to dechiper it with viginere method.
 
 The dechipered text can be used as the root password for the machine
