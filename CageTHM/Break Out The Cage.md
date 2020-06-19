@@ -137,7 +137,7 @@ By waiting  for a few minutes we will get a shell as cage
 ![alt text](https://i.imgur.com/UqSNz4e.png)
 
 # Cage
-- User Flag
+- User Flag  
 The user flag is inside a file in cage's home directory. The file is called `Super_Duper_Checklist`
 
 # Getting Root
