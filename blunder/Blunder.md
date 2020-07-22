@@ -1,5 +1,5 @@
 # Blunder
-![alt text](https://www.hackthebox.eu/storage/avatars/6437ea67350beceeb5c313f386bd1abe_thumb.png)
+![alt text](https://www.hackthebox.eu/storage/avatars/6437ea67350beceeb5c313f386bd1abe_thumb.png)   
 Hack the Box, Blunder   
 Easy, Linux, 20 Points
 
