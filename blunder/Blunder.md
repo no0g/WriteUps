@@ -105,7 +105,7 @@ Easy, Linux, 20 Points
 
 # User Access
 
-to gain user access, we need to exploit we will have to exploit arbitrary file upload.
+to gain user access, we need to exploit bludit's arbitrary file upload vulnerability.
 here i'm using metasploit, but it can also be done by using the php exploit.
 here is the [link](https://www.rapid7.com/db/modules/exploit/linux/http/bludit_upload_images_exec) to the rapid7 website regarding the module that will be used.
 
