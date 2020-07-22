@@ -110,7 +110,7 @@ here i'm using metasploit, but it can also be done by using the php exploit.
 here is the [link](https://www.rapid7.com/db/modules/exploit/linux/http/bludit_upload_images_exec) to the rapid7 website regarding the module that will be used.
 
 ![alt text](https://i.imgur.com/X2hdtiF.png)
-after getting shell as www-data, we can try to enumerate the website deployment directory to find the passwordhash of the user 'hugo'.
+after getting shell as www-data, we can try to enumerate the website deployment directory to find the password hash of the user 'hugo'.
 
 Inside 
     ```
@@ -149,6 +149,6 @@ we can exploit it with a simple command. Since the sudo can work with bash, so w
     ```
     $ sudo -u#-1 /bin/bash
     ```
-from that simple command we can directly get a root shell
+from that simple command we can directly get a root shell   
 ![alt text](https://i.imgur.com/I8r0HzY.png)
 
