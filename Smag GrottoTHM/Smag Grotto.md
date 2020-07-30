@@ -56,7 +56,7 @@ Add development.smag.thm to your `/etc/hosts` and access it through browser.
     127.0.0.1	localhost
     127.0.1.1	reza-HP-Spectre
     172.16.122.129	hekerendonesa
-    10.10.228.117	smag.thm	development.smag.thm
+    10.10.228.117	smag.thm	development.smag.thm < ----
     10.10.70.17	windcorp.thm	fire.windcorp.thm
     172.16.122.130	nugroho-server
     ```
