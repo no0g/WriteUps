@@ -88,7 +88,7 @@ After changing that, we can access jake's account with no password.
 ![alt text](https://i.imgur.com/WgpnqsN.png)   
 
 ## Getting to Root
-From the moment i get access to user `jake`, the first thing i tried is to check jake's sudo cprivilege with the command `sudo -l`.  
+From the moment i get access to user `jake`, the first thing i tried is to check jake's sudo privilege with the command `sudo -l`.  
 And here's what i got 
 ```bash
 jake@smag:~$ sudo -l
