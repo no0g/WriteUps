@@ -1,4 +1,5 @@
-# Smag Grotto
+# Smag Grotto  
+![alt text](https://tryhackme-images.s3.amazonaws.com/room-icons/e98b431f4e36498ca81cec12472c3231.jpeg)   
 TryHackMe Easy [Room](https://tryhackme.com/room/smaggrotto)
 
 ## Nmap Scan
